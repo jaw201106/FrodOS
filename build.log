@@ -1,0 +1,775 @@
+grub-mkrescue: info: temporary iso9660 dir is `/tmp/grub.mbmI6P'.
+grub-mkrescue: info: copying `/usr/share/locale/nb_NO/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/nb_NO.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/nb_NO/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/io/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/io.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/io/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/mr/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/mr.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/mr/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/lv/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/lv.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/lv/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/kk/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/kk.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/kk/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/mg/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/mg.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/mg/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/jbo/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/jbo.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/jbo/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/sw/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/sw.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/sw/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/az/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/az.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/az/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ga/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ga.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ga/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/da/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/da.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/da/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ne/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ne.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ne/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/bar/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/bar.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/bar/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/mi/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/mi.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/mi/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/pap/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/pap.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/pap/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/trv/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/trv.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/trv/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/vi/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/vi.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/vi/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/crh/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/crh.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/crh/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ast/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ast.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ast/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/chr/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/chr.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/chr/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/nv/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/nv.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/nv/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ab/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ab.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ab/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/sd/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/sd.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/sd/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/nah/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/nah.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/nah/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ia/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ia.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ia/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/pms/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/pms.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/pms/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/csb/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/csb.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/csb/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/kv/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/kv.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/kv/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ha/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ha.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ha/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/lo/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/lo.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/lo/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/tr/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/tr.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/tr/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/nb/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/nb.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/nb/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/eu/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/eu.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/eu/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/or/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/or.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/or/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/hy/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/hy.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/hy/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/kmr/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/kmr.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/kmr/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/id/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/id.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/id/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/bn_IN/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/bn_IN.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/bn_IN/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ro/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ro.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ro/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ta/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ta.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ta/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/lg/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/lg.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/lg/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/en_GB/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/en_GB.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/en_GB/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/kn/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/kn.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/kn/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ht/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ht.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ht/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/byn/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/byn.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/byn/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/pam/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/pam.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/pam/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/st/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/st.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/st/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ckb/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ckb.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ckb/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ach/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ach.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ach/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ru/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ru.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ru/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/tig/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/tig.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/tig/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/sl/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/sl.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/sl/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/cv/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/cv.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/cv/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/hr/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/hr.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/hr/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/szl/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/szl.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/szl/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/mnw/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/mnw.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/mnw/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/tt@iqtelif/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/tt@iqtelif.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/tt@iqtelif/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/sr@latin/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/sr@latin.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/sr@latin/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/bo/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/bo.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/bo/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/frp/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/frp.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/frp/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/uz@cyrillic/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/uz@cyrillic.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/uz@cyrillic/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/wal/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/wal.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/wal/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/nn/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/nn.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/nn/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/tzm/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/tzm.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/tzm/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/wa/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/wa.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/wa/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/en@quot/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/en@quot.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/en@quot/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/eo/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/eo.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/eo/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/fy/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/fy.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/fy/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/fi/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/fi.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/fi/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/pa/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/pa.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/pa/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/en/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/en.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/en/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/nds/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/nds.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/nds/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/gn/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/gn.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/gn/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/mhr/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/mhr.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/mhr/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ar/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ar.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ar/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/cy/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/cy.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/cy/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/co/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/co.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/co/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/pt/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/pt.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/pt/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/vec/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/vec.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/vec/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/es/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/es.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/es/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/an/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/an.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/an/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ce/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ce.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ce/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ky/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ky.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ky/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/mjw/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/mjw.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/mjw/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ug/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ug.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ug/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ceb/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ceb.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ceb/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/pi/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/pi.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/pi/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ca/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ca.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ca/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/pt_BR/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/pt_BR.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/pt_BR/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/sat/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/sat.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/sat/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/arn/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/arn.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/arn/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/os/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/os.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/os/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/dz/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/dz.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/dz/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ak/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ak.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ak/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ca@valencia/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ca@valencia.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ca@valencia/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ee/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ee.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ee/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/haw/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/haw.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/haw/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/bs/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/bs.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/bs/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ka/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ka.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ka/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/en_AU/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/en_AU.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/en_AU/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/li/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/li.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/li/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/sk/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/sk.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/sk/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/zu/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/zu.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/zu/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/bg/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/bg.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/bg/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/lt/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/lt.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/lt/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/sq/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/sq.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/sq/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/th/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/th.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/th/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/fa/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/fa.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/fa/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/gez/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/gez.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/gez/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/be/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/be.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/be/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/bem/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/bem.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/bem/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ff/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ff.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ff/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/jam/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/jam.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/jam/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/rw/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/rw.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/rw/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/jv/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/jv.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/jv/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/tt/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/tt.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/tt/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/kw/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/kw.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/kw/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/hu/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/hu.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/hu/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/bn_BD/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/bn_BD.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/bn_BD/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ja/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ja.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ja/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/tl/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/tl.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/tl/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ms/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ms.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ms/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/gu/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/gu.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/gu/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ch/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ch.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ch/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/de_DE/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/de_DE.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/de_DE/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ur/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ur.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ur/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/fur/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/fur.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/fur/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ln/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ln.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ln/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/hi/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/hi.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/hi/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/si/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/si.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/si/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/kok/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/kok.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/kok/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/sc/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/sc.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/sc/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/en@shaw/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/en@shaw.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/en@shaw/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/son/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/son.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/son/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/tg/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/tg.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/tg/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/zh_TW/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/zh_TW.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/zh_TW/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ie/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ie.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ie/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ps/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ps.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ps/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ti/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ti.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ti/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/sco/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/sco.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/sco/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/na/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/na.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/na/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/el/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/el.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/el/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/wo/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/wo.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/wo/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/br/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/br.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/br/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/de/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/de.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/de/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/nso/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/nso.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/nso/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/sa/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/sa.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/sa/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/km/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/km.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/km/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/kl/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/kl.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/kl/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/lld/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/lld.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/lld/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/sv/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/sv.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/sv/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/se/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/se.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/se/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/su/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/su.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/su/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/fa_AF/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/fa_AF.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/fa_AF/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/dv/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/dv.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/dv/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ve/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ve.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ve/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ary/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ary.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ary/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/fo/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/fo.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/fo/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/bi/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/bi.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/bi/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/bn/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/bn.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/bn/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/en_CA/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/en_CA.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/en_CA/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/te/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/te.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/te/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/qu/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/qu.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/qu/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/fr/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/fr.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/fr/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/shn/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/shn.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/shn/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/mn/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/mn.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/mn/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/gl/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/gl.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/gl/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/gd/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/gd.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/gd/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ru_UA/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ru_UA.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ru_UA/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/uk/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/uk.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/uk/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/it/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/it.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/it/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/so/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/so.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/so/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/sr/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/sr.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/sr/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/xh/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/xh.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/xh/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/as/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/as.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/as/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/lb/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/lb.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/lb/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/nl/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/nl.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/nl/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/et/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/et.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/et/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/pa_PK/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/pa_PK.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/pa_PK/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/fr_CA/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/fr_CA.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/fr_CA/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/he/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/he.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/he/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/pl/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/pl.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/pl/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ko/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ko.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ko/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/mk/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/mk.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/mk/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/my/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/my.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/my/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/fil/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/fil.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/fil/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/is/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/is.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/is/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/mai/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/mai.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/mai/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/gv/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/gv.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/gv/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ba/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ba.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ba/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/yo/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/yo.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/yo/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ace/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ace.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ace/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/cs/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/cs.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/cs/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/tk/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/tk.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/tk/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/kab/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/kab.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/kab/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ay/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ay.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ay/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/oc/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/oc.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/oc/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/zh_CN/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/zh_CN.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/zh_CN/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/be@latin/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/be@latin.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/be@latin/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ro_MD/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ro_MD.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ro_MD/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/pt_PT/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/pt_PT.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/pt_PT/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/af/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/af.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/af/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/iu/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/iu.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/iu/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/mt/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/mt.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/mt/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ki/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ki.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ki/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/zh_HK/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/zh_HK.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/zh_HK/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/en@boldquot/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/en@boldquot.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/en@boldquot/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ku/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ku.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ku/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/uz/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/uz.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/uz/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/ml/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/ml.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/ml/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale/am/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/am.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale/am/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale-langpack/en_GB/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/en_GB.mo'.
+grub-mkrescue: info: copying `/usr/share/locale-langpack/en_US/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/en_US.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale-langpack/en_US/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale-langpack/en@quot/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/en@quot.mo'.
+grub-mkrescue: info: copying `/usr/share/locale-langpack/en/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/en.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale-langpack/en/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale-langpack/en_AU/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/en_AU.mo'.
+grub-mkrescue: info: copying `/usr/share/locale-langpack/en@shaw/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/en@shaw.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale-langpack/en@shaw/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/share/locale-langpack/en_CA/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/en_CA.mo'.
+grub-mkrescue: info: copying `/usr/share/locale-langpack/en@boldquot/LC_MESSAGES/grub.mo' -> `/tmp/grub.mbmI6P/boot/grub/locale/en@boldquot.mo'.
+grub-mkrescue: info: cannot open `/usr/share/locale-langpack/en@boldquot/LC_MESSAGES/grub.mo': No such file or directory.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/cpio_be.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/cpio_be.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/fshelp.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/fshelp.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/part_gpt.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/part_gpt.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_serpent.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_serpent.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/multiboot.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/multiboot.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/terminal.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/terminal.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_md4.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_md4.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/regexp.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/regexp.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/wrmsr.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/wrmsr.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/video_colors.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/video_colors.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/videotest.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/videotest.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/videoinfo.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/videoinfo.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/at_keyboard.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/at_keyboard.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/exfat.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/exfat.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/sleep.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/sleep.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/spkmodem.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/spkmodem.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/afsplitter.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/afsplitter.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/net.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/net.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/ufs1.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/ufs1.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/rdmsr.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/rdmsr.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/pci.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/pci.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/part_bsd.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/part_bsd.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/usbserial_ftdi.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/usbserial_ftdi.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_tiger.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_tiger.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/halt.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/halt.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/sendkey.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/sendkey.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/hello.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/hello.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/udf.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/udf.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/signature_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/signature_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/bsd.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/bsd.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/disk.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/disk.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/password_pbkdf2.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/password_pbkdf2.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_rsa.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_rsa.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/mmap.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/mmap.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/minix_be.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/minix_be.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/raid5rec.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/raid5rec.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/asn1.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/asn1.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_des.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_des.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/sfs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/sfs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/datetime.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/datetime.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/bitmap_scale.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/bitmap_scale.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/acpi.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/acpi.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/all_video.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/all_video.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_blowfish.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_blowfish.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/search_fs_uuid.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/search_fs_uuid.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/usbserial_usbdebug.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/usbserial_usbdebug.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/lvm.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/lvm.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/cmostest.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/cmostest.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/part_dfly.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/part_dfly.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/hdparm.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/hdparm.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/div_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/div_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/password.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/password.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/rsa_sexp_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/rsa_sexp_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/testload.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/testload.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_seed.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_seed.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/plainmount.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/plainmount.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/loopback.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/loopback.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/setjmp.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/setjmp.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gfxmenu.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gfxmenu.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/bufio.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/bufio.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/backtrace.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/backtrace.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/help.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/help.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/usb_keyboard.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/usb_keyboard.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/datehook.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/datehook.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/procfs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/procfs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_twofish.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_twofish.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/read.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/read.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/time.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/time.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/setpci.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/setpci.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/part_sun.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/part_sun.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/xnu_uuid.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/xnu_uuid.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/zstd.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/zstd.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/pcidump.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/pcidump.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/dm_nv.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/dm_nv.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/part_acorn.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/part_acorn.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/keystatus.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/keystatus.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/raid6rec.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/raid6rec.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/bfs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/bfs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/mpi.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/mpi.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_keccak.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_keccak.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/hfsplus.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/hfsplus.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gfxterm_background.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gfxterm_background.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/memdisk.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/memdisk.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/linux.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/linux.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/hwmatch.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/hwmatch.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/mdraid1x.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/mdraid1x.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/random.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/random.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/parttool.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/parttool.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/echo.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/echo.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/pubkey.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/pubkey.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/ntfs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/ntfs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/part_apple.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/part_apple.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_arcfour.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_arcfour.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/linux16.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/linux16.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/ehci.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/ehci.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/lsapm.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/lsapm.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/adler32.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/adler32.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_gostr3411_94.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_gostr3411_94.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/freedos.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/freedos.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/date.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/date.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/mda_text.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/mda_text.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/font.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/font.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/video.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/video.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/usbserial_common.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/usbserial_common.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/geli.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/geli.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/video_bochs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/video_bochs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/ctz_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/ctz_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/legacycfg.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/legacycfg.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/lsmmap.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/lsmmap.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/keylayouts.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/keylayouts.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/msdospart.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/msdospart.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/mdraid09_be.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/mdraid09_be.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/cbmemc.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/cbmemc.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/probe.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/probe.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/cmp.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/cmp.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/xnu_uuid_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/xnu_uuid_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_idea.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_idea.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/squash4.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/squash4.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/part_msdos.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/part_msdos.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/cbtime.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/cbtime.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/cpuid.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/cpuid.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/scsi.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/scsi.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/pgp.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/pgp.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/diskfilter.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/diskfilter.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/cbfs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/cbfs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/cbls.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/cbls.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/newc.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/newc.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/json.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/json.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/affs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/affs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/jfs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/jfs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/ata.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/ata.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/smbios.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/smbios.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/aout.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/aout.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/macbless.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/macbless.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gfxterm.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gfxterm.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/hfs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/hfs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/exfctest.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/exfctest.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_sha1.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_sha1.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/luks2.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/luks2.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_whirlpool.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_whirlpool.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_blake2.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_blake2.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/biosdisk.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/biosdisk.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/ntldr.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/ntldr.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/minix3_be.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/minix3_be.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/jpeg.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/jpeg.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/elf.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/elf.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/eval.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/eval.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gettext.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gettext.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/asn1_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/asn1_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_gost28147.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_gost28147.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_rmd160.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_rmd160.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/ntfscomp.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/ntfscomp.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/vga.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/vga.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/plan9.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/plan9.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_rijndael.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_rijndael.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/testspeed.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/testspeed.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/hfspluscomp.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/hfspluscomp.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/videotest_checksum.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/videotest_checksum.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/part_plan.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/part_plan.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/morse.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/morse.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/shift_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/shift_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/cpio.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/cpio.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/mdraid09.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/mdraid09.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_salsa20.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_salsa20.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_camellia.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_camellia.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/cmosdump.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/cmosdump.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/legacy_password_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/legacy_password_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gdb.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gdb.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/priority_queue.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/priority_queue.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/offsetio.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/offsetio.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/truecrypt.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/truecrypt.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_sm4.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_sm4.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/png.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/png.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/part_dvh.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/part_dvh.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/bswap_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/bswap_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/minix.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/minix.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_sha256.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_sha256.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/usbtest.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/usbtest.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/reboot.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/reboot.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/trig.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/trig.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/pata.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/pata.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/test_blockarg.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/test_blockarg.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/ahci.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/ahci.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gptsync.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gptsync.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/blocklist.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/blocklist.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/usbserial_pl2303.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/usbserial_pl2303.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/search.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/search.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/part_sunpc.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/part_sunpc.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/usb.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/usb.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/reiserfs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/reiserfs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/hashsum.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/hashsum.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/hexdump.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/hexdump.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/f2fs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/f2fs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/loadenv.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/loadenv.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/ohci.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/ohci.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/efiemu.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/efiemu.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_dsa.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_dsa.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/minix3.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/minix3.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/pbkdf2.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/pbkdf2.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/romfs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/romfs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/cat.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/cat.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/normal.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/normal.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/archelp.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/archelp.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/minix2_be.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/minix2_be.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_aria.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_aria.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/video_fb.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/video_fb.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/minix2.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/minix2.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/key_protector.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/key_protector.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/extcmd.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/extcmd.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/http.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/http.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_sha512.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_sha512.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/div.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/div.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/memrw.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/memrw.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/tar.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/tar.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/mul_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/mul_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_sm3.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_sm3.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/vga_text.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/vga_text.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/verifiers.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/verifiers.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/tr.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/tr.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/xnu.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/xnu.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/progress.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/progress.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/syslinuxcfg.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/syslinuxcfg.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/configfile.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/configfile.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/uhci.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/uhci.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/btrfs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/btrfs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/cbtable.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/cbtable.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/cmp_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/cmp_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/serial.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/serial.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/ufs1_be.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/ufs1_be.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/macho.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/macho.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/lzopio.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/lzopio.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/usbms.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/usbms.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/xzio.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/xzio.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/luks.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/luks.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/tftp.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/tftp.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/iso9660.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/iso9660.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/minicmd.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/minicmd.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/zfs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/zfs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/zfscrypt.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/zfscrypt.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/nilfs2.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/nilfs2.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/ls.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/ls.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_md5.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_md5.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/nativedisk.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/nativedisk.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/terminfo.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/terminfo.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/dsa_sexp_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/dsa_sexp_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/pxechain.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/pxechain.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/vbe.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/vbe.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/bitmap.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/bitmap.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/play.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/play.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/915resolution.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/915resolution.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/crc64.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/crc64.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/ldm.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/ldm.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/afs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/afs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/part_amiga.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/part_amiga.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/sleep_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/sleep_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/crypto.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/crypto.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/pxe.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/pxe.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/fat.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/fat.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/iorw.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/iorw.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/lsacpi.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/lsacpi.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/multiboot2.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/multiboot2.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/tga.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/tga.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_crc.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_crc.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/setjmp_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/setjmp_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/true.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/true.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/zfsinfo.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/zfsinfo.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/erofs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/erofs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/ext2.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/ext2.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/ufs2.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/ufs2.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_rfc2268.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_rfc2268.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_cast5.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_cast5.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/lspci.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/lspci.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/odc.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/odc.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/file.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/file.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/functional_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/functional_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/video_cirrus.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/video_cirrus.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gzio.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gzio.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/pbkdf2_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/pbkdf2_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/search_label.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/search_label.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/cryptodisk.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/cryptodisk.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/strtoull_test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/strtoull_test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/xfs.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/xfs.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/test.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/test.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/gcry_stribog.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/gcry_stribog.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/relocator.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/relocator.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/chain.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/chain.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/boot.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/boot.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/search_fs_file.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/search_fs_file.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/drivemap.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/drivemap.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/cs5536.mod' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/cs5536.mod'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/efiemu32.o' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/efiemu32.o'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/efiemu64.o' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/efiemu64.o'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/moddep.lst' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/moddep.lst'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/command.lst' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/command.lst'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/fs.lst' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/fs.lst'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/partmap.lst' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/partmap.lst'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/parttool.lst' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/parttool.lst'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/video.lst' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/video.lst'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/crypto.lst' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/crypto.lst'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/terminal.lst' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/terminal.lst'.
+grub-mkrescue: info: copying `/usr/lib/grub/i386-pc/modinfo.sh' -> `/tmp/grub.mbmI6P/boot/grub/i386-pc/modinfo.sh'.
+grub-mkrescue: info: copying `/usr/share/grub/unicode.pf2' -> `/tmp/grub.mbmI6P/boot/grub/fonts/unicode.pf2'.
+grub-mkrescue: info: enabling BIOS support ....
+grub-mkrescue: info: grub-mkimage --directory '/usr/lib/grub/i386-pc' --prefix '/boot/grub' --output '/tmp/grub.mbmI6P/boot/grub/i386-pc/eltorito.img' --format 'i386-pc-eltorito' --compression 'auto' --config '/tmp/grub.creY1W' 'biosdisk' 'iso9660'
+.
+grub-mkrescue: info: the size of config file is 0xc0.
+grub-mkrescue: info: the total module size is 0x42c8.
+grub-mkrescue: info: reading /usr/lib/grub/i386-pc/kernel.img.
+grub-mkrescue: info: locating the section .text at 0x0.
+grub-mkrescue: info: locating the section .rodata at 0x6430.
+grub-mkrescue: info: locating the section .data at 0x7880.
+grub-mkrescue: info: locating the section .bss at 0x8120.
+grub-mkrescue: info: reading /usr/lib/grub/i386-pc/biosdisk.mod.
+grub-mkrescue: info: reading /usr/lib/grub/i386-pc/fshelp.mod.
+grub-mkrescue: info: reading /usr/lib/grub/i386-pc/iso9660.mod.
+grub-mkrescue: info: reading /tmp/grub.creY1W.
+grub-mkrescue: info: kernel_img=0x5ae432cacc40, kernel_size=0x811c.
+grub-mkrescue: info: the core size is 0x65ea.
+grub-mkrescue: info: reading /usr/lib/grub/i386-pc/lzma_decompress.img.
+grub-mkrescue: info: reading /usr/lib/grub/i386-pc/cdboot.img.
+grub-mkrescue: info: writing 0x800 bytes.
+grub-mkrescue: info: reading /usr/lib/grub/i386-pc/diskboot.img.
+grub-mkrescue: info: writing 0x200 bytes.
+grub-mkrescue: info: writing 0x70fa bytes.
+grub-mkrescue: info: executing xorriso -as mkisofs -graft-points --modification-date=2026032807213600 -b boot/grub/i386-pc/eltorito.img -no-emul-boot -boot-load-size 4 -boot-info-table --grub2-boot-info --grub2-mbr /usr/lib/grub/i386-pc/boot_hybrid.img --protective-msdos-label -o frodos.iso -r /tmp/grub.mbmI6P --sort-weight 0 / --sort-weight 1 /boot iso/.
+xorriso 1.5.6 : RockRidge filesystem manipulator, libburnia project.
+
+Drive current: -outdev 'stdio:frodos.iso'
+Media current: stdio file, overwriteable
+Media status : is blank
+Media summary: 0 sessions, 0 data blocks, 0 data, 14.5g free
+Added to ISO image: directory '/'='/tmp/grub.mbmI6P'
+xorriso : UPDATE :     313 files added in 1 seconds
+Added to ISO image: directory '/'='/home/vboxuser/FrodOS/iso'
+xorriso : UPDATE :     316 files added in 1 seconds
+xorriso : NOTE : Copying to System Area: 512 bytes from file '/usr/lib/grub/i386-pc/boot_hybrid.img'
+ISO image produced: 2743 sectors
+Written to medium : 2743 sectors at LBA 0
+Writing to 'stdio:frodos.iso' completed successfully.
+

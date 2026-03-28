@@ -1,0 +1,9 @@
+Building FrodOS...
+snake.c: In function ‘start_snake_game’:
+snake.c:346:12: error: implicit declaration of function ‘inb’ [-Wimplicit-function-declaration]
+  346 |         if(inb(0x64) & 0x01) {
+      |            ^~~
+snake.c:349:26: error: ‘keyboard_map’ undeclared (first use in this function)
+  349 |                 char c = keyboard_map[scancode];
+      |                          ^~~~~~~~~~~~
+snake.c:349:26: note: each undeclared identifier is reported only once for each function it appears in
