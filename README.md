@@ -4,6 +4,8 @@ I made this because I wanted to learn how a bootloader loads a kernel and shell 
 
 How to compile this OS:
 
+  NASM compiler is needed to make sure that boot.s will.. BOOT, so you would use a command like this (use "nasm -f elf32 boot.s -o boot.o")
+  
   Use a compiler that compiles C (gcc will work). This cannot use anything like m32 or freestanding as it will include the weird stuff that your computer will not recognize
 
   A linker to link headers (use "ld -m elf_i386 -T linker.ld boot.o kernel.o -o kernel.bin") to link the object files together
