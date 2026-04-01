@@ -15,6 +15,8 @@ int str_compare(char* s1, char* s2);
 void idt_install();
 // COLOR
 void kset_color(unsigned char color);
+// RAYCASTER
+void start_raycaster();
 
 
 #endif

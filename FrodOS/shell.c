@@ -1,4 +1,5 @@
 #include "shell.h"
+#include "pmm.h"
 
 // 1. Hardware Bridge
 static inline unsigned char inb(unsigned short port) {
@@ -32,20 +33,40 @@ void process_command(char* buffer, void* mboot_ptr) {
     kprint("\n");
 
     if (str_compare(buffer, "hi") == 0) {
-        kprint("32bit lets goooo");
+        kprint("PMM update idk wht this is tbh");
     }
     else if (str_compare(buffer, "butwouldyoulose") == 0) {
         kprint("Nah, I'd Win.");
     }
     else if (str_compare(buffer, "ver") == 0) {
-        kprint("FrodOS V0.05 - GDT and IDT");
+        kprint("FrodOS V0.06 - PMM & More Colors!");
     }
     else if (str_compare(buffer, "help") == 0) {
-        kprint("Commands: hi, ver, help, clear, reboot, testvid, halt, memtest, meminfo, gdtinfo, color");
+        kprint("Commands: hi, ver, help, clear, reboot, testvid, halt, memtest, meminfo, gdtinfo, color, alloc, freeall");
     }
+    else if (str_compare(buffer, "alloc") == 0) {
+        void* addr = pmm_alloc_page();
+        if (addr) {
+            kprint("Allocated 4KB page at: 0x");
+            kprint_int((unsigned int)addr);
+        } else {
+            kprint("Out of memory!");
+        }
+    }
+    else if (str_compare(buffer, "freeall") == 0) {
+        kprint("Resetting PMM... (Use with caution)");
+    }
+    // --- NEW COLOR COMMANDS ---
+    else if (str_compare(buffer, "color 0") == 0) { kset_color(0x07); kprint("Color: Light Gray"); }
+    else if (str_compare(buffer, "color 1") == 0) { kset_color(0x09); kprint("Color: Bright Blue"); }
+    else if (str_compare(buffer, "color 2") == 0) { kset_color(0x0A); kprint("Color: Light Green"); }
+    else if (str_compare(buffer, "color 3") == 0) { kset_color(0x0B); kprint("Color: Light Cyan"); }
+    else if (str_compare(buffer, "color 4") == 0) { kset_color(0x0C); kprint("Color: Light Red"); }
+    else if (str_compare(buffer, "color 5") == 0) { kset_color(0x0D); kprint("Color: Light Magenta"); }
+    else if (str_compare(buffer, "color 6") == 0) { kset_color(0x0E); kprint("Color: Yellow"); }
+    else if (str_compare(buffer, "color 7") == 0) { kset_color(0x0F); kprint("Color: White"); }
     else if (str_compare(buffer, "color") == 0) {
-        kprint("Usage: color <0-9>. Testing Green...");
-        kset_color(0x0A); // Light Green
+        kprint("Usage: color <0-7>");
     }
     else if (str_compare(buffer, "clear") == 0) {
         kclear();
@@ -74,7 +95,7 @@ void process_command(char* buffer, void* mboot_ptr) {
         while(1) { __asm__ volatile("hlt"); }
     }
     else if (str_compare(buffer, "gdtinfo") == 0) {
-        extern struct gdt_ptr gp; // Now the compiler knows what this struct is!
+        extern struct gdt_ptr gp; // idk
         kprint("GDT Limit: "); kprint_int(gp.limit);
         kprint("\nGDT Base: 0x"); kprint("Loaded");
     }
@@ -84,7 +105,7 @@ void process_command(char* buffer, void* mboot_ptr) {
         if (*mem_ptr == 0xDEADBEEF) {
             kprint("Memory Test Passed at 0x1000000!");
         } else {
-            kprint("Memory Test Failed!");
+            kprint("Memory Test Failed oh noo!");
         }
     }
     else {
@@ -100,11 +121,11 @@ void launch_shell(void* mboot_ptr) {
     // Print splash on entry
     kprint("***************************************\n");
     kprint("*          Welcome to FrodOS          *\n");
-    kprint("*            Version 0.05             *\n");
+    kprint("*            Version 0.06             *\n");
     kprint("***************************************\n");
 
     char buffer[80];
-    int buffer_idx = 0;
+    int buffer_idx = 2;
 
     kprint("\n> ");
 
