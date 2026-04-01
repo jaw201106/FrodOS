@@ -16,4 +16,4 @@ How to compile this OS:
 
 That is about it. Since this project isn't fully finished it has limited support so use a virtual machine like QEMU or VirtualBox for the best compatibility
 
-Frod. Have fun with it
+BUUUTT Since update 0.06. I have added Makefiles! All you have to do is (use: make) and that helps compile the OS (For Linux users of course) Bust for anyone who uses any other Operating system but I'll add that later.
