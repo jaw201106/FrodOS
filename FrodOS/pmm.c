@@ -5,7 +5,7 @@
 #define BITMAP_SIZE 32768 // Manages up to 128MB
 uint32_t pmm_bitmap[BITMAP_SIZE / 32];
 
-// 1. Internal Helpers
+// 1. Internal Helpers (Must be above alloc/init)
 void pmm_lock_page(uint32_t addr) {
     uint32_t page = addr / PAGE_SIZE;
     pmm_bitmap[page / 32] |= (1 << (page % 32));
@@ -49,4 +49,3 @@ void pmm_init(uint32_t mem_size) {
         }
     }
 }
-// remember that this will need updating later.

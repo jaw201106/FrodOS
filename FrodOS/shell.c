@@ -1,14 +1,54 @@
 #include "shell.h"
 #include "pmm.h"
+#include "fat32.h"
 
-// 1. Hardware Bridge
+static inline uint16_t inw(uint16_t port) {
+    uint16_t result;
+    asm volatile("inw %1, %0" : "=a"(result) : "Nd"(port));
+    return result;
+}
+
 static inline unsigned char inb(unsigned short port) {
     unsigned char result;
     __asm__ volatile("inb %1, %0" : "=a"(result) : "Nd"(port));
     return result;
 }
 
-// 2. Keyboard Map
+static inline void outb(unsigned short port, unsigned char val) {
+    asm volatile ( "outb %0, %1" : : "a"(val), "Nd"(port) );
+}
+
+#define BUFFER_SIZE 1024
+
+// --- State Variables ---
+int shift_pressed = 0;
+int caps_lock = 0;
+int shell_buffer_idx = 0;
+char shell_buffer[BUFFER_SIZE];
+void* global_mboot_ptr = (void*)0;
+
+void process_command(char* buffer, void* mboot_ptr);
+
+// --- Input Helpers ---
+char to_uppercase(char c) {
+    if (c >= 'a' && c <= 'z') return c - 32;
+    return c;
+}
+
+void handle_backspace() {
+    if (shell_buffer_idx > 0) {
+        shell_buffer_idx--;
+        kprint("\b");
+    }
+}
+
+void handle_newline() {
+    shell_buffer[shell_buffer_idx] = '\0';
+    process_command(shell_buffer, global_mboot_ptr);
+    shell_buffer_idx = 0;
+}
+
+// --- Keyboard Maps ---
 unsigned char keyboard_map[128] = {
     0,  27, '1', '2', '3', '4', '5', '6', '7', '8', '9', '0', '-', '=', '\b',
     '\t', 'q', 'w', 'e', 'r', 't', 'y', 'u', 'i', 'o', 'p', '[', ']', '\n',
@@ -16,33 +56,98 @@ unsigned char keyboard_map[128] = {
     'z', 'x', 'c', 'v', 'b', 'n', 'm', ',', '.', '/', 0, '*', 0, ' '
 };
 
-// 3. String Compare
-int str_compare(char* s1, char* s2) {
-    int i = 0;
-    while (s1[i] != '\0' && s1[i] == s2[i]) {
-        i++;
-    }
-    return (unsigned char)s1[i] - (unsigned char)s2[i];
-}
+unsigned char keyboard_map_shifted[128] = {
+    0,  27, '!', '@', '#', '$', '%', '^', '&', '*', '(', ')', '_', '+', '\b',
+    '\t', 'Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', '{', '}', '\n',
+    0, 'A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L', ':', '\"', '~', 0, '|',
+    'Z', 'X', 'C', 'V', 'B', 'N', 'M', '<', '>', '?', 0, '*', 0, ' '
+};
 
+void keyboard_handler_main() {
+    unsigned char scancode = inb(0x60);
+    outb(0x20, 0x20);
+
+    if (!(scancode & 0x80)) {
+        switch(scancode) {
+            case 0x0E: handle_backspace(); break;
+            case 0x1C:
+                if (shell_buffer_idx > 0) {
+                    handle_newline();
+                } else {
+                    kprint("\n");
+                }
+                kprint("> ");
+                break;
+            case 0x2A:
+            case 0x36: shift_pressed = 1;  break;
+            case 0x3A: caps_lock = !caps_lock; break;
+            default: {
+                // Safety check: ensure scancode is within map bounds
+                if (scancode < 128) {
+                    char c = shift_pressed ? keyboard_map_shifted[scancode] : keyboard_map[scancode];
+
+                    if (c != 0) {
+                        if (caps_lock) {
+                            if (c >= 'a' && c <= 'z') c -= 32;
+                            else if (c >= 'A' && c <= 'Z') c += 32;
+                        }
+                        put_char(c);
+
+                        if (shell_buffer_idx < BUFFER_SIZE - 1) {
+                            shell_buffer[shell_buffer_idx++] = c;
+                        }
+                    }
+                }
+                break;
+            }
+        }
+    } else {
+        unsigned char released_code = scancode & 0x7F;
+        if (released_code == 0x2A || released_code == 0x36) shift_pressed = 0;
+    }
+}
 // 4. Command Processor
 #include "shell.h"
-#include "gdt.h" // Essential for gdtinfo command
+#include "gdt.h"
+#include "ata.h"
 
 void process_command(char* buffer, void* mboot_ptr) {
     kprint("\n");
-
     if (str_compare(buffer, "hi") == 0) {
-        kprint("PMM update idk wht this is tbh");
+        kprint("FAT32 gng. oh ye make sure you HAVE FAT32 disk or ts gon hang. Too lazy mb...");
     }
     else if (str_compare(buffer, "butwouldyoulose") == 0) {
         kprint("Nah, I'd Win.");
     }
     else if (str_compare(buffer, "ver") == 0) {
-        kprint("FrodOS V0.06 - PMM & More Colors!");
+        kprint("FrodOS V0.07 - Filesystem and FAT32!");
     }
     else if (str_compare(buffer, "help") == 0) {
-        kprint("Commands: hi, ver, help, clear, reboot, testvid, halt, memtest, meminfo, gdtinfo, color, alloc, freeall");
+        kprint("Commands: hi, ver, help, clear, reboot, testvid, halt, memtest, meminfo, gdtinfo, color, alloc, freeall, readmbr, fd, lf, type");
+    }
+    else if (str_compare(buffer, "lf") == 0) {
+        fat32_ls();
+    }
+    else if (str_compare_partial(buffer, "fd") == 0) {
+        fat32_cd(buffer + 3);
+    }
+    else if (str_compare(buffer, "readmbr") == 0) {
+        uint16_t sector_data[256];
+        ata_read_sector(0, sector_data);
+        kprint("Reading LBA 0...\n");
+        uint16_t magic = sector_data[255];
+
+        if (magic == 0xAA55) {
+            kprint("um... signature 0x55AA found ig.\n");
+        } else {
+            kprint("Error: Disk IS GONE BROCHACHO Got: 0x");
+            kset_color(0x0C);
+            kprint_int(magic);
+            kset_color(0x07);
+        }
+    }
+    else if (str_compare_partial(buffer, "type") == 0) {
+        fat32_cat(buffer + 4);
     }
     else if (str_compare(buffer, "alloc") == 0) {
         void* addr = pmm_alloc_page();
@@ -53,6 +158,7 @@ void process_command(char* buffer, void* mboot_ptr) {
             kprint("Out of memory!");
         }
     }
+
     else if (str_compare(buffer, "freeall") == 0) {
         kprint("Resetting PMM... (Use with caution)");
     }
@@ -112,49 +218,38 @@ void process_command(char* buffer, void* mboot_ptr) {
         kprint("Unknown command: ");
         kprint(buffer);
     }
-    kprint("\n> ");
+        kprint("\n");
 }
 
 
 // 5. Shell Entry
 void launch_shell(void* mboot_ptr) {
-    // Print splash on entry
+    global_mboot_ptr = mboot_ptr;
+
     kprint("***************************************\n");
     kprint("*          Welcome to FrodOS          *\n");
-    kprint("*            Version 0.06             *\n");
+    kprint("*            Version 0.07             *\n");
     kprint("***************************************\n");
-
-    char buffer[80];
-    int buffer_idx = 2;
-
     kprint("\n> ");
 
     while(1) {
-        if (inb(0x64) & 0x01) {
-            unsigned char scancode = inb(0x60);
-            if (!(scancode & 0x80)) {
-                char c = keyboard_map[scancode];
-                if (c == '\n') {
-                    buffer[buffer_idx] = '\0';
-                    process_command(buffer, mboot_ptr);
-                    buffer_idx = 0;
-                } else if (c == '\b' && buffer_idx > 0) {
-                    buffer_idx--;
-                    // Manual screen backspace logic
-                    extern int vga_cursor;
-                    extern unsigned short* vga_buffer;
-                    vga_cursor--;
-                    vga_buffer[vga_cursor] = (unsigned short)' ' | (0x07 << 8);
-                } else if (c >= ' ' && buffer_idx < 79) {
-                    buffer[buffer_idx++] = c;
-                    char t[2] = {c, '\0'};
-                    kprint(t);
-                } else if (c == '\n') {
-                        buffer[buffer_idx] = '\0';
-                        process_command(buffer, mboot_ptr); // Pass it along!
-                        buffer_idx = 0;
-                }
-            }
-        }
+        asm volatile("hlt");
     }
 }
+
+int str_compare_partial(char* s1, char* s2) {
+    int i = 0;
+    while (s2[i] != '\0') {
+        if (s1[i] != s2[i]) return (unsigned char)s1[i] - (unsigned char)s2[i];
+        i++;
+    }
+    return 0;
+}
+int str_compare(char* s1, char* s2) {
+    int i = 0;
+    while (s1[i] != '\0' && s1[i] == s2[i]) {
+        i++;
+    }
+    return (unsigned char)s1[i] - (unsigned char)s2[i];
+}
+

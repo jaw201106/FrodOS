@@ -7,34 +7,32 @@ MBOOT_CHECKSUM      equ -(MBOOT_HEADER_MAGIC + MBOOT_HEADER_FLAGS)
 
 [BITS 32]
 
-[GLOBAL mboot]
-[EXTERN code]
-[EXTERN bss]
-[EXTERN end]
-
+; Put the header back at the top without a section tag
+; so it stays at the very front of the binary.
 mboot:
     dd  MBOOT_HEADER_MAGIC
     dd  MBOOT_HEADER_FLAGS
     dd  MBOOT_CHECKSUM
 
 [GLOBAL _start]
-[GLOBAL gdt_flush]    ; Fixes gdt.c "undefined reference"
-[GLOBAL idt_load]     ; Fixes idt.c "undefined reference"
+[GLOBAL gdt_flush]
+[GLOBAL idt_load]
+[GLOBAL irq1_handler]
 
 [EXTERN kernel_main]
-[EXTERN gp]           ; From gdt.c
-[EXTERN idtp]         ; From idt.c
+[EXTERN keyboard_handler_main]
+[EXTERN gp]
+[EXTERN idtp]
 
 _start:
-    ; Multiboot standard:
-    ; EAX = 0x2BADB002 (Magic value)
-    ; EBX = Pointer to the Multiboot information structure
-    push eax            ; Second argument: magic
-    push ebx            ; First argument: mboot_ptr
+    ; --- THE FIX: SETUP THE STACK ---
+    mov esp, stack_top
 
-    call kernel_main    ; Jump into your C kernel
+    push eax
+    push ebx
 
-    ; Safety: If kernel_main returns, halt
+    call kernel_main
+
     cli
 .hang:
     hlt
@@ -42,7 +40,7 @@ _start:
 
 ; --- GDT FLUSH ---
 gdt_flush:
-    lgdt [gp]        ; Load the GDT pointer from gdt.c
+    lgdt [gp]
     mov ax, 0x10
     mov ds, ax
     mov es, ax
@@ -55,5 +53,20 @@ flush2:
 
 ; --- IDT LOAD ---
 idt_load:
-    lidt [idtp]      ; Load the IDT pointer from idt.c
+    lidt [idtp]
     ret
+
+; --- KEYBOARD INTERRUPT HANDLER ---
+irq1_handler:
+    pushad
+    cld
+    call keyboard_handler_main
+    popad
+    iretd
+
+; --- RESERVED STACK SPACE ---
+section .bss
+align 16
+stack_bottom:
+    resb 16384
+stack_top:

@@ -8,13 +8,13 @@ CFLAGS = -m32 -ffreestanding -O2 -Wall -Wextra
 ASFLAGS = -f elf32
 LDFLAGS = -m elf_i386 -T linker.ld
 
-# 2. Objects to link
-OBJS = boot.o kernel.o video.o gdt.o idt.o shell.o pmm.o
+# 2. Objects to link - ADDED ata.o HERE
+OBJS = boot.o kernel.o video.o gdt.o idt.o shell.o pmm.o ata.o mbr.o fat32.o
 
-# 3. Default target: Now builds the binary AND the ISO automatically
+# 3. Default target
 all: FrodOS.iso
 
-# 4. Link the kernel binary (Using kernel.bin as requested)
+# 4. Link the kernel binary
 kernel.bin: $(OBJS)
 	$(LD) $(LDFLAGS) -o $@ $^
 
@@ -26,7 +26,7 @@ kernel.bin: $(OBJS)
 boot.o: boot.s
 	$(AS) $(ASFLAGS) $< -o $@
 
-# 7. Create the ISO (Force updates)
+# 7. Create the ISO
 FrodOS.iso: kernel.bin
 	@mkdir -p iso/boot/grub
 	cp kernel.bin iso/boot/kernel.bin
