@@ -6,7 +6,7 @@ How to compile this OS:
 
   NASM compiler is needed to make sure that boot.s will.. BOOT, so you would use a command like this (use "nasm -f elf32 boot.s -o boot.o")
   
-  Use a compiler that compiles C (gcc will work). This has to use flags like m32 or freestanding as it will include the weird stuff that your computer will not recognize
+  Use a compiler that compiles C (gcc will work). This has to use flags like m32 or freestanding as it will include the weird stuff that your computer will not recognize. Or most definitely, use a cross-compiler but this may affect **make**
 
   A linker to link headers (use "ld -m elf_i386 -T linker.ld boot.o kernel.o -o kernel.bin") to link the object files together
 
@@ -16,4 +16,5 @@ How to compile this OS:
 
 That is about it. Since this project isn't fully finished it has limited support so use a virtual machine like QEMU or VirtualBox for the best compatibility
 
-BUUUTT Since update 0.06. I have added Makefiles! All you have to do is (use: make) and that helps compile the OS (For Linux users of course) Bust for anyone who uses any other Operating system but I'll add that later.
+Since update 0.06. I have added Makefiles! All you have to do is (use: make) and that helps compile the OS (For Linux users of course)
+
