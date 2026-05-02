@@ -1,6 +1,7 @@
 #include "shell.h"
 #include "pmm.h"
 #include "fat32.h"
+#include "speaker.h"
 
 static inline uint16_t inw(uint16_t port) {
     uint16_t result;
@@ -114,31 +115,45 @@ void keyboard_handler_main() {
 void process_command(char* buffer, void* mboot_ptr) {
     kprint("\n");
     if (str_compare(buffer, "hi") == 0) {
-        kprint("FAT32 gng. oh ye make sure you HAVE FAT32 disk or ts gon hang. Too lazy mb...");
+        kprint("Sounds and speakers gng.\n");
+        kprint("peak ik ik \n");
     }
     else if (str_compare(buffer, "butwouldyoulose") == 0) {
         kprint("Nah, I'd Win.");
     }
     else if (str_compare(buffer, "ver") == 0) {
-        kprint("FrodOS V0.07 - Filesystem and FAT32!");
+        kprint("FrodOS V0.08 - Sounds and Beeps!");
     }
     else if (str_compare(buffer, "mewo") == 0) {
+        kset_color(0x8F);
+        beep();
+        kclear();
         kprint ("                  302      302    \n");
-        kprint ("                 00 0     00 0    \n");
-        kprint ("               00  000000000 0    \n");
+        kprint ("                 00 |     00 |    \n");
+        kprint ("               00  |00000000 |    \n");
         kprint ("            000000000000000000    \n");
         kprint ("          10000000000000000000    \n");
         kprint ("    00000 100000000000000000000   \n");
         kprint ("   000000000000000   80000   00   \n");
         kprint ("             00000000000000000    \n");
         kprint ("               00000000000000     \n");
+        kset_color(0x20);
         kprint("irlmarrrcywo_");
+        kset_color(0x07);
     }
     else if (str_compare(buffer, "help") == 0) {
-        kprint("Commands: hi, ver, help, clear, reboot, testvid, halt, memtest, meminfo, gdtinfo, color, alloc, freeall, readmbr, fd, lf, type");
+        kprint("Commands: hi, ver, help, clear, reboot, testvid, halt, memtest, meminfo, gdtinfo, color, alloc, freeall, readmbr, fd, lf, type, sound");
     }
     else if (str_compare(buffer, "lf") == 0) {
         fat32_ls();
+    }
+    else if (str_compare(buffer, "sound") == 0) {
+        kprint("Request for speaker use...\n");
+        kprint("Beep 1\n");
+        beep();
+        kprint("Beep 2\n");
+        beep();
+        kprint("Command finish\n");
     }
     else if (str_compare_partial(buffer, "fd") == 0) {
         fat32_cd(buffer + 3);
@@ -153,6 +168,7 @@ void process_command(char* buffer, void* mboot_ptr) {
             kprint("um... signature 0x55AA found ig.\n");
         } else {
             kprint("Error: Disk IS GONE BROCHACHO Got: 0x");
+            beep();
             kset_color(0x0C);
             kprint_int(magic);
             kset_color(0x07);
@@ -174,7 +190,7 @@ void process_command(char* buffer, void* mboot_ptr) {
     else if (str_compare(buffer, "freeall") == 0) {
         kprint("Resetting PMM... (Use with caution)");
     }
-    // --- NEW COLOR COMMANDS ---
+    // --- COLOR COMMANDS ---
     else if (str_compare(buffer, "color 0") == 0) { kset_color(0x07); kprint("Color: Light Gray"); }
     else if (str_compare(buffer, "color 1") == 0) { kset_color(0x09); kprint("Color: Bright Blue"); }
     else if (str_compare(buffer, "color 2") == 0) { kset_color(0x0A); kprint("Color: Light Green"); }
@@ -183,6 +199,8 @@ void process_command(char* buffer, void* mboot_ptr) {
     else if (str_compare(buffer, "color 5") == 0) { kset_color(0x0D); kprint("Color: Light Magenta"); }
     else if (str_compare(buffer, "color 6") == 0) { kset_color(0x0E); kprint("Color: Yellow"); }
     else if (str_compare(buffer, "color 7") == 0) { kset_color(0x0F); kprint("Color: White"); }
+    else if (str_compare(buffer, "color inv34t3d") == 0) { kset_color(0xF0); kprint("Color: Secret!"); }
+    else if (str_compare(buffer, "color ketchup") == 0) { kset_color(0x14); kprint("Color: Secret!"); }
     else if (str_compare(buffer, "color") == 0) {
         kprint("Usage: color <0-7>");
     }

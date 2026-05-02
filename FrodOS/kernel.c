@@ -1,6 +1,7 @@
 #include "gdt.h"
 #include "shell.h"
 #include "pmm.h"
+#include "speaker.h"
 
 // We only need ONE kernel_main.
 // Multiboot loaders (like GRUB) put the 'magic' value in EAX and 'mboot_ptr' in EBX.
@@ -24,6 +25,7 @@ void kernel_main(void* mboot_ptr, unsigned int magic) {
         kprint("PMM Initialized with ");
         kprint_int(mem_upper_kb / 1024);
         kprint(" MB of RAM.\n");
+        beep();
     } else {
         kprint("Warning: I am a chud\n");
     }

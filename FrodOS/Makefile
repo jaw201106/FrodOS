@@ -9,7 +9,7 @@ ASFLAGS = -f elf32
 LDFLAGS = -m elf_i386 -T linker.ld
 
 # 2. Objects to link - ADDED ata.o HERE
-OBJS = boot.o kernel.o video.o gdt.o idt.o shell.o pmm.o ata.o mbr.o fat32.o
+OBJS = boot.o kernel.o video.o gdt.o idt.o shell.o pmm.o ata.o mbr.o fat32.o speaker.o
 
 # 3. Default target
 all: FrodOS.iso
