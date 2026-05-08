@@ -258,7 +258,7 @@ void launch_shell(void* mboot_ptr) {
 
     kprint("***************************************\n");
     kprint("*          Welcome to FrodOS          *\n");
-    kprint("*            Version 0.07             *\n");
+    kprint("*            Version 0.08             *\n");
     kprint("***************************************\n");
     kprint("\n> ");
 
