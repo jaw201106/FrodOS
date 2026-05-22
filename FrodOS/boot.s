@@ -7,32 +7,43 @@ MBOOT_CHECKSUM      equ -(MBOOT_HEADER_MAGIC + MBOOT_HEADER_FLAGS)
 
 [BITS 32]
 
-; Put the header back at the top without a section tag
-; so it stays at the very front of the binary.
+; Force the header into a dedicated section that the linker script can grab
+section .multiboot
+align 4
 mboot:
     dd  MBOOT_HEADER_MAGIC
     dd  MBOOT_HEADER_FLAGS
     dd  MBOOT_CHECKSUM
 
+; Switch to the main executable text section
+section .text
+
 [GLOBAL _start]
 [GLOBAL gdt_flush]
 [GLOBAL idt_load]
-[GLOBAL irq1_handler]
+[GLOBAL irq0_handler]         ; Exposed to hook the PIT clock ticker
+[GLOBAL irq1_handler]         ; Exposed to hook the keyboard
+[GLOBAL exception13_handler]  ; Exposed to hook General Protection Faults
 
 [EXTERN kernel_main]
-[EXTERN keyboard_handler_main]
+[EXTERN timer_callback]       ; From timer.c
+[EXTERN keyboard_handler_main]; From your keyboard driver
+[EXTERN gpf_handler_main]     ; From kernel.c
 [EXTERN gp]
 [EXTERN idtp]
 
 _start:
-    ; --- THE FIX: SETUP THE STACK ---
+    ; 1. Secure an explicit 16KB execution stack boundary
     mov esp, stack_top
 
+    ; 2. GRUB parameters: push EAX (magic) first, then EBX (mboot_ptr) last
+    ; This ensures C reads (void* mboot_ptr, unsigned int magic) in correct order
     push eax
     push ebx
 
     call kernel_main
 
+    ; Safety dead loop fallback trap
     cli
 .hang:
     hlt
@@ -56,13 +67,41 @@ idt_load:
     lidt [idtp]
     ret
 
-; --- KEYBOARD INTERRUPT HANDLER ---
+; --- SYSTEM TIMER INTERRUPT HANDLER (IRQ 0) ---
+irq0_handler:
+    pushad
+    cld
+    call timer_callback
+
+    ; Send End-Of-Interrupt (EOI) signal byte to the Master PIC
+    mov al, 0x20
+    out 0x20, al
+
+    popad
+    iretd
+
+; --- KEYBOARD INTERRUPT HANDLER (IRQ 1) ---
 irq1_handler:
     pushad
     cld
     call keyboard_handler_main
+
+    ; Send End-Of-Interrupt (EOI) signal byte to the Master PIC
+    mov al, 0x20
+    out 0x20, al
+
     popad
     iretd
+
+; --- GENERAL PROTECTION FAULT TRAP HANDLER (Exception 13) ---
+exception13_handler:
+    ; Note: CPU pushes an error code onto the stack for Exception 13 automatically.
+    ; We can clear interrupts or hop straight into our crash reporter display.
+    cli
+    call gpf_handler_main
+.halt_loop:
+    hlt
+    jmp .halt_loop
 
 ; --- RESERVED STACK SPACE ---
 section .bss

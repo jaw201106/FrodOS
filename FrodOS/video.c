@@ -1,9 +1,5 @@
 #include "shell.h"
-
-// 1. Hardware Helper
-static inline void outb(unsigned short port, unsigned char val) {
-    asm volatile ( "outb %0, %1" : : "a"(val), "Nd"(port) );
-}
+#include "io.h"        // Uses your system I/O header instead of duplicate inline assembly
 
 // VGA Memory Settings
 unsigned short* vga_buffer = (unsigned short*)0xB8000;
@@ -85,4 +81,11 @@ void kprint_int(int n) {
         num /= 10;
     }
     kprint(&buf[i + 1]);
+}
+
+// 9. Hexadecimal Byte Printer (Resolves the missing MBR symbol error)
+void kprint_hex8(unsigned char val) {
+    const char hex_chars[] = "0123456789ABCDEF";
+    put_char(hex_chars[(val >> 4) & 0x0F]); // Extract high nibble
+    put_char(hex_chars[val & 0x0F]);        // Extract low nibble
 }

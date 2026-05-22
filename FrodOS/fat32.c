@@ -1,117 +1,307 @@
 #include "fat32.h"
 #include "shell.h"
 
+// External kernel dependencies from your video / shell / io layers
 void put_char(char c);
+void kprint(const char* str);
+void kprint_int(int num);
+int ata_read_sector(uint32_t lba, uint16_t* buffer);
 
+// Internal state tracking
 static uint32_t partition_start_lba = 0;
 static struct fat32_bpb bpb;
 static uint32_t current_dir_cluster = 0;
 
-// 1. Math Helpers
-uint32_t get_lba_from_cluster(uint32_t cluster) {
+// Internal Helpers
+static uint32_t get_lba_from_cluster(uint32_t cluster) {
+    if (cluster < 2) return 0;
     uint32_t fat_start = partition_start_lba + bpb.reserved_sectors;
     uint32_t data_start = fat_start + (bpb.fat_count * bpb.fat_size_32);
     return ((cluster - 2) * bpb.sectors_per_cluster) + data_start;
 }
 
+static void internal_memcpy(void* dest, const void* src, uint32_t n) {
+    uint8_t* d = (uint8_t*)dest;
+    const uint8_t* s = (const uint8_t*)src;
+    for (uint32_t i = 0; i < n; i++) d[i] = s[i];
+}
+
+static int str_case_cmp(const char* s1, const char* s2) {
+    while (*s1 && *s2) {
+        char c1 = *s1;
+        char c2 = *s2;
+        if (c1 >= 'a' && c1 <= 'z') c1 -= 32;
+        if (c2 >= 'a' && c2 <= 'z') c2 -= 32;
+        if (c1 != c2) return c1 - c2;
+        s1++;
+        s2++;
+    }
+    return (unsigned char)*s1 - (unsigned char)*s2;
+}
+
 uint32_t fat32_get_next_cluster(uint32_t cluster) {
     uint32_t fat_sector = bpb.reserved_sectors + (cluster / 128);
     uint32_t fat_offset = (cluster % 128);
-    uint16_t buf[256];
-    ata_read_sector(partition_start_lba + fat_sector, buf);
-    uint32_t* fat_table = (uint32_t*)buf;
+    __attribute__((aligned(4))) uint8_t sector_buf[512];
+
+    ata_read_sector(partition_start_lba + fat_sector, (uint16_t*)sector_buf);
+    uint32_t* fat_table = (uint32_t*)sector_buf;
     return fat_table[fat_offset] & 0x0FFFFFFF;
 }
 
-// 2. Initialize
+// Reconstructs Unicode bytes safely down to an ASCII buffer slot
+static void parse_lfn_chunk(struct fat32_lfn_entry* lfn, char* lfn_name_buf) {
+    int index = (lfn->sequence_num & 0x1F) - 1;
+    int char_offset = index * 13;
+
+    // 5 characters from part 1
+    for (int i = 0; i < 5; i++) {
+        uint16_t u = lfn->name_part1[i];
+        if (u == 0x0000 || u == 0xFFFF) return;
+        lfn_name_buf[char_offset++] = (char)(u & 0xFF);
+    }
+    // 6 characters from part 2
+    for (int i = 0; i < 6; i++) {
+        uint16_t u = lfn->name_part2[i];
+        if (u == 0x0000 || u == 0xFFFF) return;
+        lfn_name_buf[char_offset++] = (char)(u & 0xFF);
+    }
+    // 2 characters from part 3
+    for (int i = 0; i < 2; i++) {
+        uint16_t u = lfn->name_part3[i];
+        if (u == 0x0000 || u == 0xFFFF) return;
+        lfn_name_buf[char_offset++] = (char)(u & 0xFF);
+    }
+}
+
+// Standard short 8.3 generator to print / fall back correctly if no LFN exists
+static void get_short_name(struct fat32_entry* entry, char* out_buf) {
+    int p = 0;
+    for (int i = 0; i < 8; i++) {
+        if (entry->name[i] != ' ') out_buf[p++] = (char)entry->name[i];
+    }
+    if (!(entry->attributes & ATTR_DIRECTORY)) {
+        out_buf[p++] = '.';
+        for (int i = 0; i < 3; i++) {
+            if (entry->ext[i] != ' ') out_buf[p++] = (char)entry->ext[i];
+        }
+        // Remove trailing dot if extension was completely empty
+        if (out_buf[p - 1] == '.') p--;
+    }
+    out_buf[p] = '\0';
+}
+
+// Initialize File System Context
 void fat32_init(uint32_t lba) {
     partition_start_lba = lba;
-    uint16_t buffer[256];
-    ata_read_sector(partition_start_lba, buffer);
-    struct fat32_bpb* temp_bpb = (struct fat32_bpb*)buffer;
-    bpb = *temp_bpb;
+    __attribute__((aligned(4))) uint8_t sector_buf[512];
+
+    ata_read_sector(partition_start_lba, (uint16_t*)sector_buf);
+    internal_memcpy(&bpb, sector_buf, sizeof(struct fat32_bpb));
+
+    if (bpb.boot_signature != 0x29 && bpb.boot_signature != 0x28) {
+        kprint("Error: Invalid FAT32 Boot Signature!\n");
+        return;
+    }
+
     current_dir_cluster = bpb.root_cluster;
-
-    kprint("\n--- FAT32 Initialized ---\n");
-    kprint("OEM Name: ");
-    for(int i=0; i<8; i++) put_char(((char*)bpb.oem)[i]);
-    kprint("\n");
+    kprint("\n--- FAT32 Upgraded Driver Initialized Successfully ---\n");
 }
 
-// 3. LS Command
-void fat32_ls() {
-    uint16_t buffer[256];
-    ata_read_sector(get_lba_from_cluster(current_dir_cluster), buffer);
-    struct fat32_entry* entry = (struct fat32_entry*)buffer;
+// Upgraded LS Command supporting Long File Names
+void fat32_ls(void) {
+    uint32_t cluster = current_dir_cluster;
+    __attribute__((aligned(4))) uint8_t sector_buf[512];
 
-    kprint("\nName        Type    Size\n");
-    for (int i = 0; i < 16; i++) {
-        if (entry[i].name[0] == 0x00) break;
-        if (entry[i].name[0] == 0xE5 || entry[i].attributes == 0x0F) continue;
+    char current_lfn[256];
+    int has_lfn = 0;
 
-        for(int j=0; j<8; j++) if(entry[i].name[j] != ' ') put_char(entry[i].name[j]);
-        if(entry[i].attributes & 0x10) kprint("    <DIR>");
-        else {
-            kprint(".");
-            for(int j=0; j<3; j++) if(entry[i].ext[j] != ' ') put_char(entry[i].ext[j]);
-            kprint("    FILE");
-        }
-        kprint("\n");
-    }
-}
+    for (int i = 0; i < 256; i++) current_lfn[i] = '\0';
 
-// 4. CAT Command Logic
-void fat32_cat(char* filename) {
-    uint16_t buffer[256];
-    ata_read_sector(get_lba_from_cluster(current_dir_cluster), buffer);
-    struct fat32_entry* entry = (struct fat32_entry*)buffer;
+    kprint("\nType    Size(Bytes)   Name\n");
+    kprint("----------------------------------------\n");
 
-    kprint("\n--- Content ---\n");
+    while (cluster < 0x0FFFFFF8 && cluster >= 2) {
+        uint32_t start_lba = get_lba_from_cluster(cluster);
 
-    for (int i = 0; i < 16; i++) {
-        if (entry[i].name[0] == filename[0] || entry[i].name[0] == (filename[0] - 32)) {
-            uint32_t cluster = (entry[i].cluster_high << 16) | entry[i].cluster_low;
+        for (uint32_t sector = 0; sector < bpb.sectors_per_cluster; sector++) {
+            ata_read_sector(start_lba + sector, (uint16_t*)sector_buf);
+            struct fat32_entry* entries = (struct fat32_entry*)sector_buf;
 
-            while (cluster < 0x0FFFFFF8 && cluster >= 2) {
-                uint16_t file_buf[256];
-                ata_read_sector(get_lba_from_cluster(cluster), file_buf);
-                char* data = (char*)file_buf;
-
-                for(int j = 0; j < 512; j++) {
-                    if (data[j] == '\0') continue; // Skip nulls
-                    put_char(data[j]);
+            for (int i = 0; i < 16; i++) {
+                if (entries[i].name[0] == 0x00) return; // End of directory marker
+                if (entries[i].name[0] == 0xE5) {
+                    has_lfn = 0; // Wipe LFN context on deleted entries
+                    continue;
                 }
-                cluster = fat32_get_next_cluster(cluster);
+
+                if (entries[i].attributes == ATTR_LONG_NAME) {
+                    struct fat32_lfn_entry* lfn = (struct fat32_lfn_entry*)&entries[i];
+                    parse_lfn_chunk(lfn, current_lfn);
+                    has_lfn = 1;
+                    continue;
+                }
+
+                // If it's a Volume ID bit marker, skip it entirely
+                if (entries[i].attributes & ATTR_VOLUME_ID) {
+                    has_lfn = 0;
+                    continue;
+                }
+
+                // Format printing properties
+                if (entries[i].attributes & ATTR_DIRECTORY) {
+                    kprint("<DIR>   -             ");
+                } else {
+                    kprint("FILE    ");
+                    kprint_int((int)entries[i].file_size);
+                    kprint("             ");
+                }
+
+                // Output dynamic tracking name
+                if (has_lfn && current_lfn[0] != '\0') {
+                    kprint(current_lfn);
+                } else {
+                    char short_name[13];
+                    get_short_name(&entries[i], short_name);
+                    kprint(short_name);
+                }
+                kprint("\n");
+
+                // Clear the LFN buffer for the next filesystem file loop entry
+                for (int idx = 0; idx < 256; idx++) current_lfn[idx] = '\0';
+                has_lfn = 0;
             }
-            kprint("\n");
-            return;
         }
+        cluster = fat32_get_next_cluster(cluster);
     }
-    kprint("File not found or empty.\n");
 }
 
-void fat32_cd(char* dirname) {
-    uint16_t buffer[256];
-    ata_read_sector(get_lba_from_cluster(current_dir_cluster), buffer);
-    struct fat32_entry* entry = (struct fat32_entry*)buffer;
+// Upgraded CAT Command matching Long File Names
+void fat32_cat(char* filename) {
+    uint32_t cluster = current_dir_cluster;
+    __attribute__((aligned(4))) uint8_t sector_buf[512];
 
-    // Convert first char of dirname to uppercase for matching
-    char target = dirname[0];
-    if (target >= 'a' && target <= 'z') target -= 32;
+    char current_lfn[256];
+    int has_lfn = 0;
+    for (int i = 0; i < 256; i++) current_lfn[i] = '\0';
 
-    for (int i = 0; i < 16; i++) {
-        if (entry[i].name[0] == 0x00) break;
+    while (cluster < 0x0FFFFFF8 && cluster >= 2) {
+        uint32_t start_lba = get_lba_from_cluster(cluster);
 
-        // Check if first letter matches AND it's a directory (attribute 0x10)
-        if (entry[i].name[0] == target && (entry[i].attributes & 0x10)) {
-            // Update the global current_dir_cluster to the new folder's cluster
-            current_dir_cluster = (entry[i].cluster_high << 16) | entry[i].cluster_low;
+        for (uint32_t sector = 0; sector < bpb.sectors_per_cluster; sector++) {
+            ata_read_sector(start_lba + sector, (uint16_t*)sector_buf);
+            struct fat32_entry* entries = (struct fat32_entry*)sector_buf;
 
-            kprint("Entered directory: ");
-            kprint(dirname);
-            kprint("\n");
-            return;
+            for (int i = 0; i < 16; i++) {
+                if (entries[i].name[0] == 0x00) break;
+                if (entries[i].name[0] == 0xE5) { has_lfn = 0; continue; }
+
+                if (entries[i].attributes == ATTR_LONG_NAME) {
+                    struct fat32_lfn_entry* lfn = (struct fat32_lfn_entry*)&entries[i];
+                    parse_lfn_chunk(lfn, current_lfn);
+                    has_lfn = 1;
+                    continue;
+                }
+
+                char short_name[13];
+                get_short_name(&entries[i], short_name);
+
+                // Match against LFN string context OR standard fallback 8.3 string context
+                if ((has_lfn && str_case_cmp(current_lfn, filename) == 0) ||
+                    (str_case_cmp(short_name, filename) == 0)) {
+
+                    if (entries[i].attributes & ATTR_DIRECTORY) {
+                        kprint("Error: Target path name is a directory.\n");
+                        return;
+                    }
+
+                    uint32_t file_cluster = ((uint32_t)entries[i].cluster_high << 16) | entries[i].cluster_low;
+                uint32_t bytes_remaining = entries[i].file_size;
+
+                kprint("\n--- File Content ---\n");
+                while (file_cluster < 0x0FFFFFF8 && file_cluster >= 2 && bytes_remaining > 0) {
+                    uint32_t file_lba = get_lba_from_cluster(file_cluster);
+
+                    for (uint32_t s = 0; s < bpb.sectors_per_cluster && bytes_remaining > 0; s++) {
+                        __attribute__((aligned(4))) uint8_t file_buf[512];
+                        ata_read_sector(file_lba + s, (uint16_t*)file_buf);
+
+                        uint32_t chunk = (bytes_remaining > 512) ? 512 : bytes_remaining;
+                        for (uint32_t j = 0; j < chunk; j++) {
+                            put_char((char)file_buf[j]);
+                        }
+                        bytes_remaining -= chunk;
+                    }
+                    file_cluster = fat32_get_next_cluster(file_cluster);
+                }
+                kprint("\n");
+                return;
+                    }
+
+                    for (int idx = 0; idx < 256; idx++) current_lfn[idx] = '\0';
+                    has_lfn = 0;
+            }
         }
+        cluster = fat32_get_next_cluster(cluster);
     }
-    kprint("Directory not found or is a file.\n");
+    kprint("File not found.\n");
+}
+
+// Upgraded CD Command matching Long File Names
+void fat32_cd(char* dirname) {
+    if (dirname[0] == '/' && dirname[1] == '\0') {
+        current_dir_cluster = bpb.root_cluster;
+        kprint("Returned to root.\n");
+        return;
+    }
+
+    uint32_t cluster = current_dir_cluster;
+    __attribute__((aligned(4))) uint8_t sector_buf[512];
+
+    char current_lfn[256];
+    int has_lfn = 0;
+    for (int i = 0; i < 256; i++) current_lfn[i] = '\0';
+
+    while (cluster < 0x0FFFFFF8 && cluster >= 2) {
+        uint32_t start_lba = get_lba_from_cluster(cluster);
+
+        for (uint32_t sector = 0; sector < bpb.sectors_per_cluster; sector++) {
+            ata_read_sector(start_lba + sector, (uint16_t*)sector_buf);
+            struct fat32_entry* entries = (struct fat32_entry*)sector_buf;
+
+            for (int i = 0; i < 16; i++) {
+                if (entries[i].name[0] == 0x00) break;
+                if (entries[i].name[0] == 0xE5) { has_lfn = 0; continue; }
+
+                if (entries[i].attributes == ATTR_LONG_NAME) {
+                    struct fat32_lfn_entry* lfn = (struct fat32_lfn_entry*)&entries[i];
+                    parse_lfn_chunk(lfn, current_lfn);
+                    has_lfn = 1;
+                    continue;
+                }
+
+                char short_name[13];
+                get_short_name(&entries[i], short_name);
+
+                if ((has_lfn && str_case_cmp(current_lfn, dirname) == 0) ||
+                    (str_case_cmp(short_name, dirname) == 0)) {
+
+                    if (!(entries[i].attributes & ATTR_DIRECTORY)) {
+                        kprint("Error: Target path name is a file.\n");
+                        return;
+                    }
+
+                    uint32_t target_cluster = ((uint32_t)entries[i].cluster_high << 16) | entries[i].cluster_low;
+                current_dir_cluster = (target_cluster == 0) ? bpb.root_cluster : target_cluster;
+                kprint("Navigated successfully.\n");
+                return;
+                    }
+
+                    for (int idx = 0; idx < 256; idx++) current_lfn[idx] = '\0';
+                    has_lfn = 0;
+            }
+        }
+        cluster = fat32_get_next_cluster(cluster);
+    }
+    kprint("Directory not found.\n");
 }

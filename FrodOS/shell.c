@@ -142,7 +142,28 @@ void process_command(char* buffer, void* mboot_ptr) {
         kset_color(0x07);
     }
     else if (str_compare(buffer, "help") == 0) {
-        kprint("Commands: hi, ver, help, clear, reboot, testvid, halt, memtest, meminfo, gdtinfo, color, alloc, freeall, readmbr, fd, lf, type, sound");
+        kprint("Commands: hi, ver, help, clear, reboot, testvid, halt, memtest, meminfo, gdtinfo, color, alloc, freeall, readmbr, fd, lf, type, sound, uptime, timer");
+    }
+    else if (str_compare(buffer, "timer") == 0) {
+        // Access the global ticking counter variable tracking from timer.c
+        extern volatile unsigned int system_ticks;
+
+        kprint("Current System Uptime Ticks: ");
+        kprint_int((int)system_ticks);
+        kprint("\n");
+    }
+    else if (str_compare(buffer, "uptime") == 0) {
+        uint32_t get_uptime_ms(void); // Forward declaration of uptime helper
+
+        uint32_t total_ms = get_uptime_ms();
+        uint32_t seconds = total_ms / 1000;
+        uint32_t milliseconds = total_ms % 1000;
+
+        kprint("System Uptime: ");
+        kprint_int((int)seconds);
+        kprint(".");
+        kprint_int((int)milliseconds);
+        kprint(" seconds\n");
     }
     else if (str_compare(buffer, "lf") == 0) {
         fat32_ls();
@@ -169,9 +190,7 @@ void process_command(char* buffer, void* mboot_ptr) {
         } else {
             kprint("Error: Disk IS GONE BROCHACHO Got: 0x");
             beep();
-            kset_color(0x0C);
             kprint_int(magic);
-            kset_color(0x07);
         }
     }
     else if (str_compare_partial(buffer, "type") == 0) {
@@ -258,7 +277,7 @@ void launch_shell(void* mboot_ptr) {
 
     kprint("***************************************\n");
     kprint("*          Welcome to FrodOS          *\n");
-    kprint("*            Version 0.08             *\n");
+    kprint("*            Version 0.09             *\n");
     kprint("***************************************\n");
     kprint("\n> ");
 
