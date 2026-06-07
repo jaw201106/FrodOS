@@ -122,7 +122,7 @@ void process_command(char* buffer, void* mboot_ptr) {
         kprint("Nah, I'd Win.");
     }
     else if (str_compare(buffer, "ver") == 0) {
-        kprint("FrodOS V0.08 - Sounds and Beeps!");
+        kprint("FrodOS V0.09 - Timer and Clocks!");
     }
     else if (str_compare(buffer, "mewo") == 0) {
         kset_color(0x8F);
