@@ -39,12 +39,14 @@ static int str_case_cmp(const char* s1, const char* s2) {
     return (unsigned char)*s1 - (unsigned char)*s2;
 }
 
+/* FIX: Mathematically aligned to accurately compute absolute sectors on partitioned disks */
 uint32_t fat32_get_next_cluster(uint32_t cluster) {
-    uint32_t fat_sector = bpb.reserved_sectors + (cluster / 128);
+    uint32_t absolute_fat_start = partition_start_lba + bpb.reserved_sectors;
+    uint32_t fat_sector = absolute_fat_start + (cluster / 128);
     uint32_t fat_offset = (cluster % 128);
     __attribute__((aligned(4))) uint8_t sector_buf[512];
 
-    ata_read_sector(partition_start_lba + fat_sector, (uint16_t*)sector_buf);
+    ata_read_sector(fat_sector, (uint16_t*)sector_buf);
     uint32_t* fat_table = (uint32_t*)sector_buf;
     return fat_table[fat_offset] & 0x0FFFFFFF;
 }
@@ -85,7 +87,6 @@ static void get_short_name(struct fat32_entry* entry, char* out_buf) {
         for (int i = 0; i < 3; i++) {
             if (entry->ext[i] != ' ') out_buf[p++] = (char)entry->ext[i];
         }
-        // Remove trailing dot if extension was completely empty
         if (out_buf[p - 1] == '.') p--;
     }
     out_buf[p] = '\0';
@@ -129,9 +130,9 @@ void fat32_ls(void) {
             struct fat32_entry* entries = (struct fat32_entry*)sector_buf;
 
             for (int i = 0; i < 16; i++) {
-                if (entries[i].name[0] == 0x00) return; // End of directory marker
+                if (entries[i].name[0] == 0x00) return; 
                 if (entries[i].name[0] == 0xE5) {
-                    has_lfn = 0; // Wipe LFN context on deleted entries
+                    has_lfn = 0; 
                     continue;
                 }
 
@@ -142,13 +143,11 @@ void fat32_ls(void) {
                     continue;
                 }
 
-                // If it's a Volume ID bit marker, skip it entirely
                 if (entries[i].attributes & ATTR_VOLUME_ID) {
                     has_lfn = 0;
                     continue;
                 }
 
-                // Format printing properties
                 if (entries[i].attributes & ATTR_DIRECTORY) {
                     kprint("<DIR>   -             ");
                 } else {
@@ -157,7 +156,6 @@ void fat32_ls(void) {
                     kprint("             ");
                 }
 
-                // Output dynamic tracking name
                 if (has_lfn && current_lfn[0] != '\0') {
                     kprint(current_lfn);
                 } else {
@@ -167,7 +165,6 @@ void fat32_ls(void) {
                 }
                 kprint("\n");
 
-                // Clear the LFN buffer for the next filesystem file loop entry
                 for (int idx = 0; idx < 256; idx++) current_lfn[idx] = '\0';
                 has_lfn = 0;
             }
@@ -206,7 +203,6 @@ void fat32_cat(char* filename) {
                 char short_name[13];
                 get_short_name(&entries[i], short_name);
 
-                // Match against LFN string context OR standard fallback 8.3 string context
                 if ((has_lfn && str_case_cmp(current_lfn, filename) == 0) ||
                     (str_case_cmp(short_name, filename) == 0)) {
 
@@ -216,30 +212,30 @@ void fat32_cat(char* filename) {
                     }
 
                     uint32_t file_cluster = ((uint32_t)entries[i].cluster_high << 16) | entries[i].cluster_low;
-                uint32_t bytes_remaining = entries[i].file_size;
+                    uint32_t bytes_remaining = entries[i].file_size;
 
-                kprint("\n--- File Content ---\n");
-                while (file_cluster < 0x0FFFFFF8 && file_cluster >= 2 && bytes_remaining > 0) {
-                    uint32_t file_lba = get_lba_from_cluster(file_cluster);
+                    kprint("\n--- File Content ---\n");
+                    while (file_cluster < 0x0FFFFFF8 && file_cluster >= 2 && bytes_remaining > 0) {
+                        uint32_t file_lba = get_lba_from_cluster(file_cluster);
 
-                    for (uint32_t s = 0; s < bpb.sectors_per_cluster && bytes_remaining > 0; s++) {
-                        __attribute__((aligned(4))) uint8_t file_buf[512];
-                        ata_read_sector(file_lba + s, (uint16_t*)file_buf);
+                        for (uint32_t s = 0; s < bpb.sectors_per_cluster && bytes_remaining > 0; s++) {
+                            __attribute__((aligned(4))) uint8_t file_buf[512];
+                            ata_read_sector(file_lba + s, (uint16_t*)file_buf);
 
-                        uint32_t chunk = (bytes_remaining > 512) ? 512 : bytes_remaining;
-                        for (uint32_t j = 0; j < chunk; j++) {
-                            put_char((char)file_buf[j]);
+                            uint32_t chunk = (bytes_remaining > 512) ? 512 : bytes_remaining;
+                            for (uint32_t j = 0; j < chunk; j++) {
+                                put_char((char)file_buf[j]);
+                            }
+                            bytes_remaining -= chunk;
                         }
-                        bytes_remaining -= chunk;
+                        file_cluster = fat32_get_next_cluster(file_cluster);
                     }
-                    file_cluster = fat32_get_next_cluster(file_cluster);
+                    kprint("\n");
+                    return;
                 }
-                kprint("\n");
-                return;
-                    }
 
-                    for (int idx = 0; idx < 256; idx++) current_lfn[idx] = '\0';
-                    has_lfn = 0;
+                for (int idx = 0; idx < 256; idx++) current_lfn[idx] = '\0';
+                has_lfn = 0;
             }
         }
         cluster = fat32_get_next_cluster(cluster);
@@ -292,13 +288,13 @@ void fat32_cd(char* dirname) {
                     }
 
                     uint32_t target_cluster = ((uint32_t)entries[i].cluster_high << 16) | entries[i].cluster_low;
-                current_dir_cluster = (target_cluster == 0) ? bpb.root_cluster : target_cluster;
-                kprint("Navigated successfully.\n");
-                return;
-                    }
+                    current_dir_cluster = (target_cluster == 0) ? bpb.root_cluster : target_cluster;
+                    kprint("Navigated successfully.\n");
+                    return;
+                }
 
-                    for (int idx = 0; idx < 256; idx++) current_lfn[idx] = '\0';
-                    has_lfn = 0;
+                for (int idx = 0; idx < 256; idx++) current_lfn[idx] = '\0';
+                has_lfn = 0;
             }
         }
         cluster = fat32_get_next_cluster(cluster);
