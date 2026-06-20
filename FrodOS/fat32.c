@@ -247,7 +247,7 @@ void fat32_cat(char* filename) {
 void fat32_cd(char* dirname) {
     if (dirname[0] == '/' && dirname[1] == '\0') {
         current_dir_cluster = bpb.root_cluster;
-        kprint("Returned to root.\n");
+        kprint("Returned to shell.\n");
         return;
     }
 
