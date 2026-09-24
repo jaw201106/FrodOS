@@ -64,7 +64,11 @@ void main(void) {
                 // --- CENTRAL CORE USER SPACE COMMAND PARSER ---
                 if (user_strcmp(command_buffer, "help") == 0) {
                     sys_print("Available commands:\n");
-                    sys_print("  help  - Display this menu list options");
+                    sys_print("  help  - Display this menu list options\n");
+                    sys_print("  clear - Clears the terminal screen\n");
+                }
+                else if (user_strcmp(command_buffer, "clear") == 0) {
+                        sys_clear();
                 }
                 else {
                     sys_print("Unknown command: ");

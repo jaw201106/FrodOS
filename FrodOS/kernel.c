@@ -127,6 +127,9 @@ void syscall_handler_main(syscall_regs_t* regs) {
             // Overwrite saved userland EAX image frame with retrieved character data payload
             regs->eax = (uint32_t)keyboard_get_char();
             break;
+        case 4: // Service 4: Clear Video Console
+            kclear();
+            break;
         default:
             kprint("\nWarning: Invalid Syscall requested by User Mode client.\n");
             break;
@@ -158,7 +161,6 @@ void gpf_handler_main(void) {
 void kernel_main(void* mboot_ptr, unsigned int magic) {
     gdt_install();
     idt_install();
-    kclear();
 
     kprint("--- Booting Custom Kernel ---\n");
 
