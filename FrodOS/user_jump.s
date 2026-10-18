@@ -4,59 +4,55 @@ global jump_to_user_mode
 global syscall_asm_handler
 extern syscall_handler_main
 
-jump_to_user_mode:
-    ; Retrieve user space entry point address from stack parameter
-    mov ebx, [esp + 4]
+USER_CODE_SEL equ 0x1B      ; GDT index 3 | RPL 3
+USER_DATA_SEL equ 0x23      ; GDT index 4 | RPL 3
+KERN_DATA_SEL equ 0x10
+USER_STACK    equ 0x300000  ; top of the user stack (grows down)
 
-    ; Disable interrupts briefly while shuffling segment registers
+; void jump_to_user_mode(uint32_t entry)
+jump_to_user_mode:
+    mov ebx, [esp + 4]
     cli
 
-    ; Setup the segment registers for User Mode Data (Selector 0x20 | RPL 3 = 0x23)
-    mov ax, 0x23
+    mov ax, USER_DATA_SEL
     mov ds, ax
     mov es, ax
     mov fs, ax
     mov gs, ax
 
-    ; Formulate the exact x86 hardware IRET stack frame layout manually
-    push 0x23           ; SS (User Data Segment Selector)
-    push 0x300000       ; ESP (Temporary user stack placed safely at 3MB area)
-
-    pushfd              ; Push current EFLAGS layout
+    push USER_DATA_SEL      ; SS
+    push USER_STACK         ; ESP
+    pushfd
     pop eax
-    or eax, 0x200       ; Force IF (Interrupt Flag) active so shell can receive inputs
-    push eax            ; EFLAGS
-
-    push 0x1B           ; CS (User Code Segment Selector 0x18 | RPL 3 = 0x1B)
-    push ebx            ; EIP (Target memory offset address of shell binary)
-
-    ; Execute Interrupt Return. Processor pops the forged frame and drops to Ring 3!
+    or  eax, 0x200          ; IF=1 so the shell receives interrupts
+    push eax                ; EFLAGS
+    push USER_CODE_SEL      ; CS
+    push ebx                ; EIP
     iretd
 
+; int 0x80 entry. The IDT gate for 0x80 must have DPL 3 (attribute 0xEE).
 syscall_asm_handler:
-    cli                 ; Disable interrupts while handling system call routing
-    push ds             ; Save current user-space segment data context boundaries
+    cli
+    push ds
     push es
     push fs
     push gs
-    pushad              ; Save general purpose registers (EAX, ECX, EDX, EBX, etc.)
+    pushad
 
-    ; Switch to standard kernel-level data segments (Index 2 -> 0x10)
-    mov ax, 0x10
+    mov ax, KERN_DATA_SEL
     mov ds, ax
     mov es, ax
+    mov fs, ax
+    mov gs, ax
+    cld
 
-    ; --- FIXED: Pass the exact address of the pushad stack frame layout into C ---
-    ; Because pushad was the last execution item, ESP points right to EDI, ESI... EAX.
-    push esp
-
+    push esp                ; syscall_regs_t* (edi, esi, ebp, esp, ebx, edx, ecx, eax)
     call syscall_handler_main
+    add esp, 4
 
-    add esp, 4         ; Clean the single stack pointer argument off the workspace stack
-
-    popad               ; Restore user context general purpose registers
+    popad
     pop gs
     pop fs
     pop es
     pop ds
-    iretd               ; Return smoothly back to User Space (Ring 3)!
+    iretd
