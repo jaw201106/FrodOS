@@ -7,7 +7,7 @@ OBJCOPY = objcopy
 USER_CFLAGS = -m32 -ffreestanding -O2 -Wall -Wextra -fno-pie -fno-stack-protector -I.
 
 APPS_SRC = $(wildcard apps/*.c)
-APPS_BIN = sys_binaries/snake.fxe sys_binaries/matrix.fxe
+APPS_BIN = sys_binaries/matrix.fxe
 
 .PHONY: all clean prep_dirs
 
