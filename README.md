@@ -20,5 +20,5 @@ Since update 0.06. I have added Makefiles! All you have to do is (use: make) and
 
 Building an app
 
-There is now system APIs to use and a software development kit to create FXE (FrodOS Executable) formatted binaries. As of the current updates, this is not finished yet but a branch is open to look and compile FXE formats. You can compile an example file listed in the branch. 
+There is now system APIs to use and a software development kit to create FXE (FrodOS Executable) formatted binaries. You can compile code and applications now with the release of 0.11.
 
